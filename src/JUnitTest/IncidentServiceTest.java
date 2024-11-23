@@ -4,6 +4,7 @@ import com.cars.dao.CrimeAnalysisImpl;
 import org.junit.jupiter.api.Test;
 import java.util.List;
 import com.cars.entity.*;
+import com.cars.exception.*;
 
 public class IncidentServiceTest {
     
