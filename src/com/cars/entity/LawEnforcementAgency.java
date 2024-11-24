@@ -66,4 +66,5 @@ public class LawEnforcementAgency {
 
     public void setOfficer(int officer) {
         this.officer = officer;
+    }
    

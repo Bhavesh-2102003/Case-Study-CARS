@@ -13,7 +13,8 @@ public class main_module {
 	public static void main(String[] args) {
 		
 		Scanner scanner=new Scanner(System.in);
-		while(true)
+		boolean exit=false;
+		while(!exit)
 		{
 			System.out.println("\n=== Crime Analysis and Reporting System ===");
 	        System.out.println("1. Create Incident");
@@ -33,6 +34,7 @@ public class main_module {
 	        	{
 	        		System.out.println("Incident Created Successfully...!");
 	        	}
+	        	break;
 	        	
 	        case 2:
 	        	System.out.println("Enter Incident ID :");
@@ -42,6 +44,7 @@ public class main_module {
 	        	String ReportStatus=scanner.nextLine();
 	        	
 	        	CrimeAnalysisImpl.updateIncidentStatus(ReportStatus, IncidentID);
+	        	break;
 	        	
 	        case 3:
 	        	System.out.println("Enter a start Date(yyyy-mm-dd) : ");
@@ -67,6 +70,8 @@ public class main_module {
 	        	    e.printStackTrace();
 	        	}
 	        	
+	        	break;
+	        	
 
 	        	
 	        	
@@ -85,6 +90,8 @@ public class main_module {
 	        	{
 	        		System.out.println("No Incident of type "+IncidentType+"\n");
 	        	}
+	        	
+	        	break;
 	        	
 	        	
 	        case 5:
@@ -106,7 +113,15 @@ public class main_module {
 	        	    e.printStackTrace();
 	        	}
 
+	        	break;
 	        	
+	        case 6:
+	        	System.out.println("Exiting... Goodbye!");
+                exit = true;
+                break;
+                
+	        default:
+                System.out.println("Invalid choice. Please try again.");
 	        }
 		}
 		

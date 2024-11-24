@@ -12,7 +12,7 @@ public class IncidentServiceTest {
     public void testCreateIncident() {
         
         
-        Incidents newIncident = new Incidents(108, "Robbery", "2024-11-23", "123, ABC Street", "Stolen items", "Open", 1, 2, 105);
+        Incidents newIncident = new Incidents(115, "Robbery", "2024-11-23", "123, ABC Street", "Stolen items", "Open", 1, 2, 105);
         boolean isCreated = CrimeAnalysisImpl.createIncident(newIncident);
         
         assertTrue(isCreated, "Incident should be created successfully.");

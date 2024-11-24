@@ -47,8 +47,8 @@ public class Incidents {
         return IncidentDate;
     }
 
-    public void setIncidentDate(String localDate) {
-        IncidentDate = localDate;
+    public void setIncidentDate(String Incidentdate) {
+        IncidentDate = Incidentdate;
     }
 
     public String getLocation() {

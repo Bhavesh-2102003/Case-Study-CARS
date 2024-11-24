@@ -1,0 +1,241 @@
+#
+# There is insufficient memory for the Java Runtime Environment to continue.
+# Native memory allocation (mmap) failed to map 130023424 bytes. Error detail: G1 virtual space
+# Possible reasons:
+#   The system is out of physical RAM or swap space
+#   This process is running with CompressedOops enabled, and the Java Heap may be blocking the growth of the native heap
+# Possible solutions:
+#   Reduce memory load on the system
+#   Increase physical memory or swap space
+#   Check if swap backing store is full
+#   Decrease Java heap size (-Xmx/-Xms)
+#   Decrease number of Java threads
+#   Decrease Java thread stack sizes (-Xss)
+#   Set larger code cache with -XX:ReservedCodeCacheSize=
+#   JVM is running with Unscaled Compressed Oops mode in which the Java heap is
+#     placed in the first 4GB address space. The Java Heap base address is the
+#     maximum limit for the native heap growth. Please use -XX:HeapBaseMinAddress
+#     to set the Java Heap base and to place the Java Heap above 4GB virtual address.
+# This output file may be truncated or incomplete.
+#
+#  Out of Memory Error (os_windows.cpp:3703), pid=15004, tid=19128
+#
+# JRE version:  (23.0.1+11) (build )
+# Java VM: OpenJDK 64-Bit Server VM (23.0.1+11, mixed mode, sharing, tiered, compressed oops, compressed class ptrs, g1 gc, windows-amd64)
+# No core dump will be written. Minidumps are not enabled by default on client versions of Windows
+#
+
+---------------  S U M M A R Y ------------
+
+Command Line: -ea --add-opens=CARS/JUnitTest=org.junit.platform.commons,ALL-UNNAMED --add-modules=ALL-MODULE-PATH -Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8 --module-path=C:\Users\karthick\.p2\pool\plugins\junit-jupiter-api_5.11.0.jar;C:\Users\karthick\.p2\pool\plugins\junit-jupiter-engine_5.11.0.jar;C:\Users\karthick\.p2\pool\plugins\junit-jupiter-migrationsupport_5.11.0.jar;C:\Users\karthick\.p2\pool\plugins\junit-jupiter-params_5.11.0.jar;C:\Users\karthick\.p2\pool\plugins\junit-platform-commons_1.11.0.jar;C:\Users\karthick\.p2\pool\plugins\junit-platform-engine_1.11.0.jar;C:\Users\karthick\.p2\pool\plugins\junit-platform-launcher_1.11.0.jar;C:\Users\karthick\.p2\pool\plugins\junit-platform-runner_1.11.0.jar;C:\Users\karthick\.p2\pool\plugins\junit-platform-suite-api_1.11.0.jar;C:\Users\karthick\.p2\pool\plugins\junit-platform-suite-engine_1.11.0.jar;C:\Users\karthick\.p2\pool\plugins\junit-platform-suite-commons_1.11.0.jar;C:\Users\karthick\.p2\pool\plugins\junit-vintage-engine_5.11.0.jar;C:\Users\karthick\.p2\pool\plugins\org.opentest4j_1.3.0.jar;C:\Users\karthick\.p2\pool\plugins\org.apiguardian.api_1.1.2.jar;C:\Users\karthick\.p2\pool\plugins\org.junit_4.13.2.v20230809-1000.jar;C:\Users\karthick\.p2\pool\plugins\org.hamcrest_3.0.0.jar;C:\Users\karthick\.p2\pool\plugins\org.hamcrest.core_2.2.0.v20230809-1000.jar;C:\Users\karthick\eclipse-workspace\CARS\bin -XX:+ShowCodeDetailsInExceptionMessages org.eclipse.jdt.internal.junit.runner.RemoteTestRunner -version 3 -port 53586 -testLoaderClass org.eclipse.jdt.internal.junit5.runner.JUnit5TestLoader -loaderpluginname org.eclipse.jdt.junit5.runtime -classNames JUnitTest.IncidentServiceTest
+
+Host: 11th Gen Intel(R) Core(TM) i3-1115G4 @ 3.00GHz, 4 cores, 7G,  Windows 11 , 64 bit Build 22621 (10.0.22621.4391)
+Time: Sat Nov 23 12:25:28 2024 India Standard Time elapsed time: 0.116711 seconds (0d 0h 0m 0s)
+
+---------------  T H R E A D  ---------------
+
+Current thread (0x000001f502ea6b20):  JavaThread "Unknown thread" [_thread_in_vm, id=19128, stack(0x000000dbd3d00000,0x000000dbd3e00000) (1024K)]
+
+Stack: [0x000000dbd3d00000,0x000000dbd3e00000]
+Native frames: (J=compiled Java code, j=interpreted, Vv=VM code, C=native code)
+V  [jvm.dll+0x6e8c79]  (no source info available)
+V  [jvm.dll+0x8d9253]  (no source info available)
+V  [jvm.dll+0x8db6de]  (no source info available)
+V  [jvm.dll+0x8dbdb3]  (no source info available)
+V  [jvm.dll+0x281aa6]  (no source info available)
+V  [jvm.dll+0x6e5575]  (no source info available)
+V  [jvm.dll+0x6d958a]  (no source info available)
+V  [jvm.dll+0x3625fa]  (no source info available)
+V  [jvm.dll+0x36aa26]  (no source info available)
+V  [jvm.dll+0x356fce]  (no source info available)
+V  [jvm.dll+0x357268]  (no source info available)
+V  [jvm.dll+0x32fbfc]  (no source info available)
+V  [jvm.dll+0x33089e]  (no source info available)
+V  [jvm.dll+0x89f955]  (no source info available)
+V  [jvm.dll+0x3bfe88]  (no source info available)
+V  [jvm.dll+0x88849c]  (no source info available)
+V  [jvm.dll+0x45a16e]  (no source info available)
+V  [jvm.dll+0x45bf81]  (no source info available)
+C  [jli.dll+0x5278]  (no source info available)
+C  [ucrtbase.dll+0x29333]  (no source info available)
+C  [KERNEL32.DLL+0x1259d]  (no source info available)
+C  [ntdll.dll+0x5af38]  (no source info available)
+
+Lock stack of current Java thread (top to bottom):
+
+
+---------------  P R O C E S S  ---------------
+
+Threads class SMR info:
+_java_thread_list=0x00007ffdd0ef8ad8, length=0, elements={
+}
+
+Java Threads: ( => current thread )
+Total: 0
+
+Other Threads:
+  0x000001f5051f7fd0 WorkerThread "GC Thread#0"                     [id=22764, stack(0x000000dbd3e00000,0x000000dbd3f00000) (1024K)]
+  0x000001f50520c1f0 ConcurrentGCThread "G1 Main Marker"            [id=12664, stack(0x000000dbd3f00000,0x000000dbd4000000) (1024K)]
+  0x000001f50520d400 WorkerThread "G1 Conc#0"                       [id=11964, stack(0x000000dbd4000000,0x000000dbd4100000) (1024K)]
+
+[error occurred during error reporting (printing all threads), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffdd05d326a]
+VM state: not at safepoint (not fully initialized)
+
+VM Mutex/Monitor currently owned by a thread:  ([mutex/lock_event])
+[0x00007ffdd0f7be70] Heap_lock - owner thread: 0x000001f502ea6b20
+
+Heap address: 0x0000000084c00000, size: 1972 MB, Compressed Oops mode: 32-bit
+
+CDS archive(s) mapped at: [0x0000000000000000-0x0000000000000000-0x0000000000000000), size 0, SharedBaseAddress: 0x0000000800000000, ArchiveRelocationMode: 1.
+Narrow klass base: 0x0000000000000000, Narrow klass shift: 0, Narrow klass range: 0x0
+
+GC Precious Log:
+ CardTable entry size: 512
+ Card Set container configuration: InlinePtr #cards 5 size 8 Array Of Cards #cards 10 size 36 Howl #buckets 4 coarsen threshold 1843 Howl Bitmap #cards 512 size 80 coarsen threshold 460 Card regions per heap region 1 cards per card region 2048
+
+Heap:
+ garbage-first heap   total reserved 2019328K, committed 0K, used 0K [0x0000000084c00000, 0x0000000100000000)
+  region size 1024K, 0 young (0K), 0 survivors (0K)
+
+[error occurred during error reporting (printing heap information), id 0xc0000005, EXCEPTION_ACCESS_VIOLATION (0xc0000005) at pc=0x00007ffdd09d51f9]
+GC Heap History (0 events):
+No events
+
+Dll operation events (1 events):
+Event: 0.063 Loaded shared library C:\Users\karthick\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_23.0.1.v20241024-1700\jre\bin\java.dll
+
+Deoptimization events (0 events):
+No events
+
+Classes loaded (0 events):
+No events
+
+Classes unloaded (0 events):
+No events
+
+Classes redefined (0 events):
+No events
+
+Internal exceptions (0 events):
+No events
+
+VM Operations (0 events):
+No events
+
+Memory protections (0 events):
+No events
+
+Nmethod flushes (0 events):
+No events
+
+Events (0 events):
+No events
+
+
+Dynamic libraries:
+0x00007ff7b77c0000 - 0x00007ff7b77ce000 	C:\Users\karthick\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_23.0.1.v20241024-1700\jre\bin\javaw.exe
+0x00007ffe340b0000 - 0x00007ffe342c7000 	C:\WINDOWS\SYSTEM32\ntdll.dll
+0x00007ffe33750000 - 0x00007ffe33814000 	C:\WINDOWS\System32\KERNEL32.DLL
+0x00007ffe31670000 - 0x00007ffe31a29000 	C:\WINDOWS\System32\KERNELBASE.dll
+0x00007ffe31aa0000 - 0x00007ffe31bb1000 	C:\WINDOWS\System32\ucrtbase.dll
+0x00007ffe1c240000 - 0x00007ffe1c257000 	C:\Users\karthick\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_23.0.1.v20241024-1700\jre\bin\jli.dll
+0x00007ffe33b20000 - 0x00007ffe33cce000 	C:\WINDOWS\System32\USER32.dll
+0x00007ffe314d0000 - 0x00007ffe314f6000 	C:\WINDOWS\System32\win32u.dll
+0x00007ffe32570000 - 0x00007ffe32599000 	C:\WINDOWS\System32\GDI32.dll
+0x00007ffe313b0000 - 0x00007ffe314cb000 	C:\WINDOWS\System32\gdi32full.dll
+0x00007ffe31d30000 - 0x00007ffe31dca000 	C:\WINDOWS\System32\msvcp_win.dll
+0x00007ffe28570000 - 0x00007ffe2858e000 	C:\Users\karthick\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_23.0.1.v20241024-1700\jre\bin\VCRUNTIME140.dll
+0x00007ffe19580000 - 0x00007ffe19812000 	C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.4391_none_2715d37f73803e96\COMCTL32.dll
+0x00007ffe33470000 - 0x00007ffe33517000 	C:\WINDOWS\System32\msvcrt.dll
+0x00007ffe335f0000 - 0x00007ffe33621000 	C:\WINDOWS\System32\IMM32.DLL
+0x00007ffe2d4d0000 - 0x00007ffe2d4dc000 	C:\Users\karthick\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_23.0.1.v20241024-1700\jre\bin\vcruntime140_1.dll
+0x00007ffe193c0000 - 0x00007ffe1944d000 	C:\Users\karthick\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_23.0.1.v20241024-1700\jre\bin\msvcp140.dll
+0x00007ffdd0290000 - 0x00007ffdd105d000 	C:\Users\karthick\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_23.0.1.v20241024-1700\jre\bin\server\jvm.dll
+0x00007ffe31ed0000 - 0x00007ffe31f82000 	C:\WINDOWS\System32\ADVAPI32.dll
+0x00007ffe32740000 - 0x00007ffe327e7000 	C:\WINDOWS\System32\sechost.dll
+0x00007ffe31c80000 - 0x00007ffe31ca8000 	C:\WINDOWS\System32\bcrypt.dll
+0x00007ffe33630000 - 0x00007ffe33744000 	C:\WINDOWS\System32\RPCRT4.dll
+0x00007ffe327f0000 - 0x00007ffe32861000 	C:\WINDOWS\System32\WS2_32.dll
+0x00007ffe30210000 - 0x00007ffe3025d000 	C:\WINDOWS\SYSTEM32\POWRPROF.dll
+0x00007ffe283d0000 - 0x00007ffe28404000 	C:\WINDOWS\SYSTEM32\WINMM.dll
+0x00007ffe261b0000 - 0x00007ffe261ba000 	C:\WINDOWS\SYSTEM32\VERSION.dll
+0x00007ffe301f0000 - 0x00007ffe30203000 	C:\WINDOWS\SYSTEM32\UMPDC.dll
+0x00007ffe304c0000 - 0x00007ffe304d8000 	C:\WINDOWS\SYSTEM32\kernel.appcore.dll
+0x00007ffe2b7e0000 - 0x00007ffe2b7ea000 	C:\Users\karthick\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_23.0.1.v20241024-1700\jre\bin\jimage.dll
+0x00007ffe2eb30000 - 0x00007ffe2ed62000 	C:\WINDOWS\SYSTEM32\DBGHELP.DLL
+0x00007ffe33cd0000 - 0x00007ffe3405f000 	C:\WINDOWS\System32\combase.dll
+0x00007ffe32410000 - 0x00007ffe324e7000 	C:\WINDOWS\System32\OLEAUT32.dll
+0x00007ffe148c0000 - 0x00007ffe148f2000 	C:\WINDOWS\SYSTEM32\dbgcore.DLL
+0x00007ffe31cb0000 - 0x00007ffe31d2b000 	C:\WINDOWS\System32\bcryptPrimitives.dll
+0x00007ffe1c600000 - 0x00007ffe1c61e000 	C:\Users\karthick\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_23.0.1.v20241024-1700\jre\bin\java.dll
+0x00007ffe332c0000 - 0x00007ffe33465000 	C:\WINDOWS\System32\ole32.dll
+0x00007ffe32a40000 - 0x00007ffe332b6000 	C:\WINDOWS\System32\SHELL32.dll
+
+dbghelp: loaded successfully - version: 4.0.5 - missing functions: none
+symbol engine: initialized successfully - sym options: 0x614 - pdb path: .;C:\Users\karthick\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_23.0.1.v20241024-1700\jre\bin;C:\WINDOWS\SYSTEM32;C:\WINDOWS\WinSxS\amd64_microsoft.windows.common-controls_6595b64144ccf1df_6.0.22621.4391_none_2715d37f73803e96;C:\Users\karthick\.p2\pool\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_23.0.1.v20241024-1700\jre\bin\server
+
+VM Arguments:
+jvm_args: -ea --add-opens=CARS/JUnitTest=org.junit.platform.commons,ALL-UNNAMED --add-modules=ALL-MODULE-PATH -Dfile.encoding=UTF-8 -Dstdout.encoding=UTF-8 -Dstderr.encoding=UTF-8 --module-path=C:\Users\karthick\.p2\pool\plugins\junit-jupiter-api_5.11.0.jar;C:\Users\karthick\.p2\pool\plugins\junit-jupiter-engine_5.11.0.jar;C:\Users\karthick\.p2\pool\plugins\junit-jupiter-migrationsupport_5.11.0.jar;C:\Users\karthick\.p2\pool\plugins\junit-jupiter-params_5.11.0.jar;C:\Users\karthick\.p2\pool\plugins\junit-platform-commons_1.11.0.jar;C:\Users\karthick\.p2\pool\plugins\junit-platform-engine_1.11.0.jar;C:\Users\karthick\.p2\pool\plugins\junit-platform-launcher_1.11.0.jar;C:\Users\karthick\.p2\pool\plugins\junit-platform-runner_1.11.0.jar;C:\Users\karthick\.p2\pool\plugins\junit-platform-suite-api_1.11.0.jar;C:\Users\karthick\.p2\pool\plugins\junit-platform-suite-engine_1.11.0.jar;C:\Users\karthick\.p2\pool\plugins\junit-platform-suite-commons_1.11.0.jar;C:\Users\karthick\.p2\pool\plugins\junit-vintage-engine_5.11.0.jar;C:\Users\karthick\.p2\pool\plugins\org.opentest4j_1.3.0.jar;C:\Users\karthick\.p2\pool\plugins\org.apiguardian.api_1.1.2.jar;C:\Users\karthick\.p2\pool\plugins\org.junit_4.13.2.v20230809-1000.jar;C:\Users\karthick\.p2\pool\plugins\org.hamcrest_3.0.0.jar;C:\Users\karthick\.p2\pool\plugins\org.hamcrest.core_2.2.0.v20230809-1000.jar;C:\Users\karthick\eclipse-workspace\CARS\bin -XX:+ShowCodeDetailsInExceptionMessages 
+java_command: org.eclipse.jdt.internal.junit.runner.RemoteTestRunner -version 3 -port 53586 -testLoaderClass org.eclipse.jdt.internal.junit5.runner.JUnit5TestLoader -loaderpluginname org.eclipse.jdt.junit5.runtime -classNames JUnitTest.IncidentServiceTest
+java_class_path (initial): C:\Users\karthick\Downloads\mysql-connector-j-9.1.0\mysql-connector-j-9.1.0\mysql-connector-j-9.1.0.jar;C:\Users\karthick\eclipse\java-2024-09\eclipse\configuration\org.eclipse.osgi\250\0\.cp;C:\Users\karthick\eclipse\java-2024-09\eclipse\configuration\org.eclipse.osgi\248\0\.cp;C:\Users\karthick\eclipse\java-2024-09\eclipse\configuration\org.eclipse.osgi\33\0\.cp;C:\Users\karthick\eclipse\java-2024-09\eclipse\configuration\org.eclipse.osgi\28\0\.cp;C:\Users\karthick\eclipse\java-2024-09\eclipse\configuration\org.eclipse.osgi\27\0\.cp
+Launcher Type: SUN_STANDARD
+
+[Global flags]
+     intx CICompilerCount                          = 3                                         {product} {ergonomic}
+     uint ConcGCThreads                            = 1                                         {product} {ergonomic}
+     uint G1ConcRefinementThreads                  = 4                                         {product} {ergonomic}
+   size_t G1HeapRegionSize                         = 1048576                                   {product} {ergonomic}
+   size_t InitialHeapSize                          = 130023424                                 {product} {ergonomic}
+   size_t MarkStackSize                            = 4194304                                   {product} {ergonomic}
+   size_t MarkStackSizeMax                         = 536870912                                 {product} {ergonomic}
+   size_t MaxHeapSize                              = 2067791872                                {product} {ergonomic}
+   size_t MinHeapDeltaBytes                        = 1048576                                   {product} {ergonomic}
+   size_t MinHeapSize                              = 8388608                                   {product} {ergonomic}
+    uintx NonNMethodCodeHeapSize                   = 5832704                                {pd product} {ergonomic}
+    uintx NonProfiledCodeHeapSize                  = 122945536                              {pd product} {ergonomic}
+    uintx ProfiledCodeHeapSize                     = 122880000                              {pd product} {ergonomic}
+    uintx ReservedCodeCacheSize                    = 251658240                              {pd product} {ergonomic}
+     bool SegmentedCodeCache                       = true                                      {product} {ergonomic}
+     bool ShowCodeDetailsInExceptionMessages       = true                                   {manageable} {command line}
+   size_t SoftMaxHeapSize                          = 2067791872                             {manageable} {ergonomic}
+     bool UseCompressedOops                        = true                           {product lp64_product} {ergonomic}
+     bool UseG1GC                                  = true                                      {product} {ergonomic}
+     bool UseLargePagesIndividualAllocation        = false                                  {pd product} {ergonomic}
+
+Logging:
+Log output configuration:
+ #0: stdout all=warning uptime,level,tags foldmultilines=false
+ #1: stderr all=off uptime,level,tags foldmultilines=false
+
+Environment Variables:
+PATH=C:/Users/karthick/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_23.0.1.v20241024-1700/jre/bin/server;C:/Users/karthick/.p2/pool/plugins/org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_23.0.1.v20241024-1700/jre/bin;C:\WINDOWS\system32;C:\WINDOWS;C:\WINDOWS\System32\Wbem;C:\WINDOWS\System32\WindowsPowerShell\v1.0\;C:\WINDOWS\System32\OpenSSH\;C:\Program Files\dotnet\;C:\Program Files\MATLAB\R2022b\bin;D:\flutter\bin;C:\Program Files (x86)\IVI Foundation\VISA\WinNT\Bin\;C:\Program Files\IVI Foundation\VISA\Win64\Bin\;C:\Program Files (x86)\National Instruments\Shared\LabVIEW CLI;I:\Git\cmd;C:\Program Files\nodejs\;C:\Users\karthick\AppData\Local\Programs\Eclipse Adoptium\jdk-21.0.5.11-hotspot\bin;C:\Program Files\nodejs\;C:\Users\karthick\AppData\Local\Microsoft\WindowsApps;C:\Users\karthick\AppData\Local\Programs\Microsoft VS Code\bin;C:\Users\karthick\AppData\Local\Microsoft\WinGet\Links;C:\Users\karthick\AppData\Roaming\npm;C:\Program Files\nodejs;;C:\Users\karthick\Desktop;
+USERNAME=karthick
+OS=Windows_NT
+PROCESSOR_IDENTIFIER=Intel64 Family 6 Model 140 Stepping 1, GenuineIntel
+TMP=C:\Users\karthick\AppData\Local\Temp
+TEMP=C:\Users\karthick\AppData\Local\Temp
+
+
+
+
+Periodic native trim disabled
+
+---------------  S Y S T E M  ---------------
+
+OS:
+ Windows 11 , 64 bit Build 22621 (10.0.22621.4391)
+OS uptime: 2 days 2:51 hours
+Hyper-V role detected
+
+CPU: total 4 (initial active 4) (2 cores per cpu, 2 threads per core) family 6 model 140 stepping 1 microcode 0xa4, cx8, cmov, fxsr, ht, mmx, 3dnowpref, sse, sse2, sse3, ssse3, sse4.1, sse4.2, popcnt, lzcnt, tsc, tscinvbit, avx, avx2, aes, erms, clmul, bmi1, bmi2, adx, avx512f, avx512dq, avx512cd, avx512bw, avx512vl, sha, fma, vzeroupper, avx512_vpopcntdq, avx512_vpclmulqdq, avx512_vaes, avx512_vnni, clflush, clflushopt, clwb, avx512_vbmi2, avx512_vbmi, hv, rdtscp, rdpid, fsrm, gfni, avx512_bitalg, f16c, cet_ibt, cet_ss, avx512_ifma
+Processor Information for the first 4 processors :
+  Max Mhz: 2995, Current Mhz: 2995, Mhz Limit: 2995
+
+Memory: 4k page, system-wide physical 7886M (390M free)
+TotalPageFile size 20812M (AvailPageFile size 52M)
+current process WorkingSet (physical memory assigned to process): 12M, peak: 12M
+current process commit charge ("private bytes"): 52M, peak: 176M
+
+vm_info: OpenJDK 64-Bit Server VM (23.0.1+11) for windows-amd64 JRE (23.0.1+11), built on 2024-10-15T00:00:00Z with MS VC++ 17.7 (VS2022)
+
+END.
